@@ -1,0 +1,56 @@
+#include <stdio.h>
+
+int main() {
+   
+    int v1, v2, selec, sum, sub, mult, divs;
+    
+    printf("Bem vindo a sua calculadora favorita! \n");
+    printf("Escreva o primeiro número que deseja calcular: \n");
+    scanf("%d", &v1);
+    printf("Escreva o segundo número que deseja calcular: \n");
+    scanf("%d", &v2);
+    printf("Agora escolha o calculo que deseja fazer: \n1-Adição \n2-Subtração \n3-Multiplicação \n4-Divisão \n\n");
+    scanf("%d", &selec);
+    
+    if (selec == 1){
+        sum = addN(v1, v2);
+        printf("O seu resultado é: %d", sum);
+    }
+    else if (selec == 2){
+        sub = subN(v1, v2);
+        printf("O seu resultado é: %d", sub);
+    }
+    else if (selec == 3){
+        mult = multN(v1, v2);
+        printf("O seu resultado é: %d", mult);
+    }
+    else if (selec == 4){
+        divs = divN(v1, v2);
+        printf("O seu resultado é: %d", divs);
+    }
+    else{
+        printf("Opa, digitou errado, recomece o programa!");
+    }
+    return 0;
+}
+
+int addN(int s1, int s2){
+    int result;
+    result = s1 + s2;
+    return result;
+}
+int subN(int s1, int s2){
+    int result;
+    result = s1 - s2;
+    return result;
+}
+int multN(int s1, int s2){
+    int result;
+    result = s1 * s2;
+    return result;
+}
+int divN(int s1, int s2){
+    int result;
+    result = s1 / s2;
+    return result;
+}
