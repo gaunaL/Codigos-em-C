@@ -1,0 +1,27 @@
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#define STRSIZE 30
+
+struct pessoa {
+  unsigned int age;
+  char nome[STRSIZE];
+};
+
+int main() {
+    
+    struct pessoa p1;
+    unsigned int age;
+    char nome[STRSIZE];
+    puts("Qual seu nome?");
+    gets(nome);
+    strcpy(p1.nome, nome);
+    printf("Qual sua idade? \n");
+    scanf("%d", &p1.age);
+    printf("Olah, seu nome eh %s e sua idade eh %d\n", p1.nome, p1.age);
+    int* ptr = &p1.age;
+    printf("Endereço alocado na memória, extraido via Pointer %p\n", &ptr);
+    
+    return 0;
+}
